@@ -168,6 +168,13 @@ export class NgRedux<RootState> {
     };
 
     /**
+     * Get the redux store object
+     */
+    getStore = (): Store<RootState> => {
+        return this._store;
+    };
+
+    /**
      * Subscribe to the Redux store changes
      *
      * @param {() => void} listener callback to invoke when the state is updated
